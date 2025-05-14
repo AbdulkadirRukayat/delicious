@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delicious Bites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-orange-500 text-white sticky top-0 z-20">
+      <nav
+        class="container mx-auto flex justify-between items-center py-4 px-4"
+      >
+        <h1 class="text-2xl font-bold">Delicious Bites</h1>
+        <div class="hidden md:flex space-x-6">
+          <a href="#home" class="hover:underline">Home</a>
+          <a href="#recipes" class="hover:underline">Recipes</a>
+          <a href="#contact" class="hover:underline">Contact</a>
+        </div>
+        <!-- Hamburger Menu for Mobile -->
+        <button id="menu-toggle" class="md:hidden text-2xl focus:outline-none">
+          &#9776;
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-orange-600 text-white flex flex-col items-center space-y-4 py-4"
+      >
+        <a href="#home" class="hover:underline">Home</a>
+        <a href="#recipes" class="hover:underline">Recipes</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main id="home" class="bg-orange-100 py-16 text-center">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Welcome to Delicious Bites
+        </h2>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">
+          Discover mouth-watering recipes and culinary inspiration for every
+          occasion.
+        </p>
+        <a
+          href="#recipes"
+          class="inline-block bg-orange-500 text-white py-2 px-6 rounded hover:bg-orange-600"
+        >
+          Explore Recipes
+        </a>
+      </div>
+    </main>
+
+    <!-- Recipes Section -->
+    <section id="recipes" class="py-16">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
+          Our Favorite Recipes
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Recipe 1 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="images/DELICIOSE BITE.jpg"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Creamy Garlic Pasta</h3>
+              <p class="text-gray-600 mb-4">
+                A rich and creamy pasta dish with a hint of garlic, perfect for
+                a cozy dinner.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600"
+              >
+                View Recipe
+              </a>
+            </div>
+          </div>
+          <!-- Recipe 2 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src="images/HHH.jpg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Fresh Garden Salad</h3>
+              <p class="text-gray-600 mb-4">
+                A vibrant salad packed with fresh veggies and a zesty lemon
+                dressing.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600"
+              >
+                View Recipe
+              </a>
+            </div>
+          </div>
+          <!-- Recipe 3 -->
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img
+              src="images/DELICIOSE BITE.jpg"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-4">
+              <h3 class="text-xl font-bold mb-2">Homemade Margherita Pizza</h3>
+              <p class="text-gray-600 mb-4">
+                A classic pizza with fresh tomatoes, mozzarella, and basil.
+              </p>
+              <a
+                href="#"
+                class="inline-block bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600"
+              >
+                View Recipe
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-200">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">
+          Get in Touch
+        </h2>
+        <div class="max-w-lg mx-auto">
+          <div class="space-y-4">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+            <textarea
+              placeholder="Message"
+              rows="5"
+              class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+            ></textarea>
+            <button
+              class="w-full bg-orange-500 text-white py-3 px-6 rounded hover:bg-orange-600"
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-orange-500 text-white py-4 text-center">
+      <p>© 2025 Delicious Bites. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Hamburger Menu Toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        menuToggle.textContent = mobileMenu.classList.contains("hidden")
+          ? "☰"
+          : "✕";
+      });
+    </script>
+  </body>
+</html>

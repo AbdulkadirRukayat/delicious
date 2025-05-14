@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men's Style Hub</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .product-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        padding: 10px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+      .product-card:hover {
+        transform: scale(1.05);
+      }
+      .product-card img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #2c3e50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #34495e;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Men's Style Hub</h1>
+      <p>Elevate your wardrobe with timeless menswear.</p>
+    </header>
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="gallery" id="gallery">
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/150x200.png?text=Suit"
+            alt="Classic Suit"
+          />
+          <h3>Classic Suit</h3>
+          <p>A sharp, tailored suit for any formal occasion.</p>
+          <button onclick="alert('Added Classic Suit to cart!')">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/150x200.png?text=Casual+Shirt"
+            alt="Casual Shirt"
+          />
+          <h3>Casual Shirt</h3>
+          <p>A versatile shirt for everyday style.</p>
+          <button onclick="alert('Added Casual Shirt to cart!')">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-card">
+          <img
+            src="https://via.placeholder.com/150x200.png?text=Leather+Jacket"
+            alt="Leather Jacket"
+          />
+          <h3>Leather Jacket</h3>
+          <p>A rugged leather jacket for a bold look.</p>
+          <button onclick="alert('Added Leather Jacket to cart!')">
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Simple script to dynamically add a new product card
+      const gallery = document.getElementById("gallery");
+      const newProduct = {
+        name: "Slim Fit Jeans",
+        description: "Comfortable and stylish jeans for a modern fit.",
+        image: "https://via.placeholder.com/150x200.png?text=Slim+Fit+Jeans",
+      };
+      setTimeout(() => {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.innerHTML = `
+        <img src="${newProduct.image}" alt="${newProduct.name}">
+        <h3>${newProduct.name}</h3>
+        <p>${newProduct.description}</p>
+        <button onclick="alert('Added ${newProduct.name} to cart!')">Add to Cart</button>
+      `;
+        gallery.appendChild(card);
+      }, 2000);
+    </script>
+  </body>
+</html>
